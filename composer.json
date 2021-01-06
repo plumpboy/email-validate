@@ -1,0 +1,38 @@
+{
+    "name": "plumpboy/emailvalidate",
+    "description": "A library for validating email via SMTP, extends from https://github.com/semplon/php-smtp-email-validation",
+    "type": "library",
+    "version": "1.0",
+    "require": {
+        "php": ">=5.3"
+    },
+    "license": "https://creativecommons.org/licenses/by/2.0/",
+    "authors": [
+        {
+            "name": "plumpboy",
+            "email": "phamtritrung39@gmail.com"
+        }
+    ],
+    "autoload": {
+        "files": [
+            "src/helpers.php"
+        ],
+        "psr-4": {
+            "Plumpboy\\EmailValidate\\": "src"
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        },
+        "laravel": {
+            "providers": [
+                "Plumpboy\\EmailValidate\\EmailValidateServiceProvider"
+            ],
+            "aliases": {
+                "EmailValidator": "Plumpboy\\EmailValidate\\EmailValidator"
+            }
+        }
+    },
+    "minimum-stability": "stable"
+}

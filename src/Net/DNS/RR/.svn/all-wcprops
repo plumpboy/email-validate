@@ -1,0 +1,77 @@
+K 25
+svn:wc:ra_dav:version-url
+V 32
+/svn/!svn/ver/5/trunk/Net/DNS/RR
+END
+SRV.php
+K 25
+svn:wc:ra_dav:version-url
+V 40
+/svn/!svn/ver/5/trunk/Net/DNS/RR/SRV.php
+END
+TXT.php
+K 25
+svn:wc:ra_dav:version-url
+V 40
+/svn/!svn/ver/5/trunk/Net/DNS/RR/TXT.php
+END
+NS.php
+K 25
+svn:wc:ra_dav:version-url
+V 39
+/svn/!svn/ver/5/trunk/Net/DNS/RR/NS.php
+END
+A.php
+K 25
+svn:wc:ra_dav:version-url
+V 38
+/svn/!svn/ver/5/trunk/Net/DNS/RR/A.php
+END
+SOA.php
+K 25
+svn:wc:ra_dav:version-url
+V 40
+/svn/!svn/ver/5/trunk/Net/DNS/RR/SOA.php
+END
+CNAME.php
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/svn/!svn/ver/5/trunk/Net/DNS/RR/CNAME.php
+END
+HINFO.php
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/svn/!svn/ver/5/trunk/Net/DNS/RR/HINFO.php
+END
+AAAA.php
+K 25
+svn:wc:ra_dav:version-url
+V 41
+/svn/!svn/ver/5/trunk/Net/DNS/RR/AAAA.php
+END
+NAPTR.php
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/svn/!svn/ver/5/trunk/Net/DNS/RR/NAPTR.php
+END
+MX.php
+K 25
+svn:wc:ra_dav:version-url
+V 39
+/svn/!svn/ver/5/trunk/Net/DNS/RR/MX.php
+END
+PTR.php
+K 25
+svn:wc:ra_dav:version-url
+V 40
+/svn/!svn/ver/5/trunk/Net/DNS/RR/PTR.php
+END
+TSIG.php
+K 25
+svn:wc:ra_dav:version-url
+V 41
+/svn/!svn/ver/5/trunk/Net/DNS/RR/TSIG.php
+END
