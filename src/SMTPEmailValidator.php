@@ -10,7 +10,7 @@ namespace Plumpboy\EmailValidate;
 
 use Plumpboy\EmailValidate\Net\DNS;
 
-class ValidateEmailViaSMTP
+class SMTPEmailValidator
 {
     /**
      * PHP Socket resource to remote MTA
@@ -91,6 +91,9 @@ class ValidateEmailViaSMTP
      */
     public function setEmails($emails)
     {
+        if (!is_array($emails)) {
+            $emails = array($emails);
+        }
         foreach ($emails as $email) {
             list($user, $domain) = $this->_parseEmail($email);
             if (!isset($this->domains[$domain])) {

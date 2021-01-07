@@ -3,7 +3,7 @@
 namespace Plumpboy\EmailValidate;
 
 use Illuminate\Support\ServiceProvider;
-use Plumpboy\EmailValidate\ValidateEmailViaSMTP;
+use Plumpboy\EmailValidate\SMTPEmailValidator;
 
 class EmailValidateServiceProvider extends ServiceProvider
 {
@@ -15,6 +15,7 @@ class EmailValidateServiceProvider extends ServiceProvider
     public function boot()
     {
         $this->app['emailvalidate']->setSenderEmail($this->app['config']['mail.from.address']);
+        $this->app['emailvalidate']->debug = $this->app['config']['app.debug'];
     }
 
     /**
@@ -24,7 +25,7 @@ class EmailValidateServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->registerSMTPValidator();
+        $this->registerSMTPEmailValidator();
     }
 
     /**
@@ -32,10 +33,10 @@ class EmailValidateServiceProvider extends ServiceProvider
      *
      * @return void
      */
-    protected function registerSMTPValidator()
+    protected function registerSMTPEmailValidator()
     {
         $this->app->singleton('emailvalidate', function ($app) {
-            return new ValidateEmailViaSMTP();
+            return new SMTPEmailValidator();
         });
     }
 }

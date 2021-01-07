@@ -12,10 +12,6 @@ if (!function_exists('email_exists')) {
      */
     function email_exists($email_addresses, $sender = null)
     {
-    	if (!is_array($email_addresses)) {
-    		$email_addresses = [$email_addresses];
-    	}
-
         return EmailValidator::validate($email_addresses, $sender);
     }
 }
