@@ -28,7 +28,7 @@ use Plumpboy\EmailValidate\SMTPEmailValidator;
 	// do the validation
 	$results = $SMTPValidator->validate($email, $sender);
 	// view results
-	echo $email.' is '.($results[$email] ? 'valid' : 'invalid')."\n";
+	echo $email.' is '.($results ? 'valid' : 'invalid')."\n"; // $results[$email] when there are many emails
 
 	// send email?
 	if ($results) { // or $results['user@example.com'] if you pass many emails
