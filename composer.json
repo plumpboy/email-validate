@@ -4,7 +4,9 @@
     "type": "library",
     "version": "1.0",
     "require": {
-        "php": ">=5.3"
+        "php": ">=5.5",
+        "egulias/email-validator": "^2.0",
+        "swiftmailer/swiftmailer": "^6.2"
     },
     "license": "CC-BY-2.0",
     "authors": [
