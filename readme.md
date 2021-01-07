@@ -18,7 +18,7 @@
 use Plumpboy\EmailValidate\ValidateEmailViaSMTP;
 ...
 	// the email to validate
-	$email = 'user@example.com';
+	$email = 'user@example.com'; // $email can be array('user@example.com', 'user1@example.com')
 	// an optional sender
 	$sender = 'user@mydomain.com';
 	// instantiate the class
@@ -26,12 +26,12 @@ use Plumpboy\EmailValidate\ValidateEmailViaSMTP;
 	// turn on debugging if you want to view the SMTP transaction
 	$SMTPValidator->debug = true;
 	// do the validation
-	$results = $SMTPValidator->validate(array($email), $sender);
+	$results = $SMTPValidator->validate($email, $sender);
 	// view results
 	echo $email.' is '.($results[$email] ? 'valid' : 'invalid')."\n";
 
 	// send email?
-	if ($results[$email]) {
+	if ($results) { // or $results['user@example.com'] if you pass many emails
 		//mail($email, 'Confirm Email', 'Please reply to this email to confirm', 'From:'.$sender."\r\n"); // send email
 	} else {
 		echo 'The email addresses you entered is not valid';
@@ -52,18 +52,18 @@ For projects use laravel version < 5.5, add below code into **config/app.php**.
 You also can use below syntax in laravel.
 
 ```php
-$result = email_exists([$email], $sender); // use helper
+$result = email_exists($emails, $sender); // use helper
 ```
 
 ```php
 ...
 use Plumpboy\EmailValidate\EmailValidator;
 ...
-$result = EmailValidator::validate([$email], $sender); // use facade
+$result = EmailValidator::validate($email, $sender); // use facade
 ```
 
 ```php
-$result = \EmailValidator::validate([$email], $sender); // or alias
+$result = \EmailValidator::validate($email, $sender); // or alias
 ```
 
 ## Contribute
