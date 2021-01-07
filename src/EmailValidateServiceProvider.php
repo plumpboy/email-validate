@@ -16,6 +16,12 @@ class EmailValidateServiceProvider extends ServiceProvider
     {
         $this->app['emailvalidate']->setSenderEmail($this->app['config']['mail.from.address']);
         $this->app['emailvalidate']->debug = $this->app['config']['app.debug'];
+
+        if ($this->app['config']['mail.validate.use_jp_style']) {
+            \Swift_DependencyContainer::getInstance()
+                ->register('email.validator')
+                ->asSharedInstanceOf('Plumpboy\EmailValidate\JpEmailValidator');
+        }
     }
 
     /**
