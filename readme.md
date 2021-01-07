@@ -15,14 +15,14 @@
 
 ```php
 ...
-use Plumpboy\EmailValidate\ValidateEmailViaSMTP;
+use Plumpboy\EmailValidate\SMTPEmailValidator;
 ...
 	// the email to validate
 	$email = 'user@example.com'; // $email can be array('user@example.com', 'user1@example.com')
 	// an optional sender
 	$sender = 'user@mydomain.com';
 	// instantiate the class
-	$SMTPValidator = new ValidateEmailViaSMTP();
+	$SMTPValidator = new SMTPEmailValidator();
 	// turn on debugging if you want to view the SMTP transaction
 	$SMTPValidator->debug = true;
 	// do the validation
@@ -65,6 +65,8 @@ $result = EmailValidator::validate($email, $sender); // use facade
 ```php
 $result = \EmailValidator::validate($email, $sender); // or alias
 ```
+
+if you do not pass param $sender, library will use ```config('mail.from.address')```.
 
 ## Contribute
 
