@@ -218,7 +218,7 @@ class SMTPEmailValidator
                 $this->debug('Error: Could not connect to a valid mail server for this email address: ' . $user.'@'.$domain);
             }
         }
-        return $results;
+        return count($results) > 1 ? $results : array_shift($results);
     }
 
     protected function send($msg)
