@@ -9,7 +9,7 @@
 
 ## Installation
 
-- composer require plumboy/emailvalidate
+- composer require plumpboy/email-validate
 
 ## Usage
 
