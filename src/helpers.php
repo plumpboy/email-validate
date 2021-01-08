@@ -38,7 +38,7 @@ if (!function_exists('validate_jp_email')) {
             "(?:(?:{$ipv6_part}:){1}(?:(?::{$ipv6_part}){1,6}|(?::{$ipv6_part}){0,4}:{$ipv4}|:))" . '|' .
             "(?::(?:(?::{$ipv6_part}){1,7}|(?::{$ipv6_part}){0,5}:{$ipv4}|:))" .
         ')';
-        $fqdn = "(?:(?:{$fqdn_part}\\.)+?{$fqdn_part})";
+        $fqdn = "(?:(?:{$fqdn_part}\\.)*?{$fqdn_part})";
         $local = "({$dot_string}++|(\"){$quoted_string}++\")";
         $domain = "({$fqdn}|\\[{$ipv4}]|\\[{$ipv6}]|\\[{$fqdn}])";
         $pattern = "/\\A{$local}@{$domain}\\z/";
